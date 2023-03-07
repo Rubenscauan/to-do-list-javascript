@@ -28,7 +28,7 @@ body{
 }
 
 #new-task{
-    width: 20rem;
+    width: 25rem;
     border-radius: 1rem;
 }
 
@@ -51,7 +51,7 @@ body{
     gap: 1rem;
     padding: 0;
 }
-#listaPendente li{
+#listaPendente li, #listaConcluida li{
     list-style-type: none;
     font-size: 1.4rem;
     text-transform: capitalize;
@@ -60,17 +60,17 @@ body{
     padding: 1;
     justify-content: space-between;
     cursor: default;
-
 }
 
-#listaPendente li:hover{
+
+#listaConcluida li:hover, #listaPendente li:hover{
     background-color:rgba(242, 236, 134, 0.424);
     transition: .4s;
     border-radius: 1rem;
     padding-left: 1rem;
 }
 
-#remover{
+#remover {
     border: none;
     background-color: rgb(20, 220, 73);
     color: white;
@@ -83,5 +83,21 @@ body{
     align-items: center;
     cursor: pointer;
 }
+
+#adicionar{
+    border: none;
+    background-color: crimson;
+    color: white;
+    padding: .2rem, .4rem;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
 
 
