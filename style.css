@@ -9,37 +9,37 @@
 		font-family: 'Roboto Condensed';
 	}
 
-	.nav_tabs{
-		width: 600px;
-		height: 400px;
-		margin: 100px auto;
-		background-color: #fff;
-		position: relative;
-	}
 
-	.nav_tabs ul{
-		list-style: none;
-	}
+.nav_tabs{
+    width: 600px;
+	height: 400px;		
+    margin: 100px auto;
+	background-color: #fff;
+	position: relative;
+}
 
-	.nav_tabs ul li{
-		float: left;
-	}
+.nav_tabs ul{
+	list-style: none;
+}
 
-	.tab_label{
-		display: block;
-		width: 100px;
-		background-color: #363b48;
-		padding: 25px;
-		font-size: 20px;
-		color:#fff;
-		cursor: pointer;
-		text-align: center;
-	}
+.nav_tabs ul li{
+	float: left;
+}
 
+.tab_label{
+	display: block;
+	width: 100px;
+	background-color: #363b48;
+	padding: 25px;
+	font-size: 20px;
+	color:#fff;
+	cursor: pointer;
+	text-align: center;
+}
 
-	.nav_tabs .rd_tab { 
-	display:none;
-	position: absolute;
+.nav_tabs .rd_tab { 
+    display:none;
+    position: absolute;
 }
 
 .nav_tabs .rd_tab:checked ~ label { 
@@ -51,7 +51,7 @@
 	background-color: #fff;
 	display: none;
 	position: absolute;
-	height: 320px;
+	height: 400px;
 	width: 600px;
 	left: 0;	
 }
@@ -66,4 +66,67 @@
 .tab-content article{
 	padding: 10px;
 	color: #555;
+}
+
+.content-task1{
+    padding: 10px;
+}
+
+#add-taskPessoal, #add-taskEscola, #add-taskOutros, #add-taskTrabalho{
+    background-color:#e54e43;
+    color: white;
+    position:relative;
+    border-radius: 10%;
+    padding: 10px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: .4s;
+    border: none;
+    outline: none;
+}
+#add-taskPessoal:hover, #add-taskEscola:hover,
+#add-taskOutros:hover, #add-taskTrabalho:hover{
+    background-color: #ee7168;
+}
+
+#new_taskPessoal, #new_taskTrabalho, #new_taskEscola, #new_taskOutros{
+    width: 500px;
+    height: 80px;
+    border-color: #e54e43;
+    border-style: groove;
+    border-block-color:initial;
+}
+
+
+#listaPendentePessoal , #listaConcluidaPessoal ,
+#listaPendenteTrabalho  , #listaConcluidaTrabalho,
+#listaPendenteEscola , #listaConcluidaEscola ,
+#listaPendenteOutros , #listaConcluidaOutros {
+    display: flex;
+    flex-direction: column;
+}
+
+#listaPendentePessoal li, #listaConcluidaPessoal li ,
+#listaPendenteTrabalho  li, #listaConcluidaTrabalho li,
+#listaPendenteEscola li, #listaConcluidaEscola li,
+#listaPendenteOutros li, #listaConcluidaOutros li{
+    list-style-type: none;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+}
+
+#listaPendentePessoal li:hover, #listaConcluidaPessoal li:hover ,
+#listaPendenteTrabalho  li:hover, #listaConcluidaTrabalho li:hover,
+#listaPendenteEscola li:hover, #listaConcluidaEscola li:hover,
+#listaPendenteOutros li:hover, #listaConcluidaOutros li:hover{
+    background-color:white;
+    transition: .4s;
+    border-radius: 1rem;
+    padding-left: 1rem;
+    cursor: default;
 }
