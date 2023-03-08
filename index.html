@@ -8,24 +8,113 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
-    <h1> Tarefas Pendentes </h1>
-    <div class="content">
-        <div class="content-task1">
-            <input type="text" id = "new_task" placeholder="Adicionar Task">
-            <button onclick = "newTask()" id = "add-task" tittle = "Adicionar Task">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 32 32">
-                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
-                  </svg>
-            </button>
-        </div>
-        <div class="content-body">
-            <ul id ="listaPendente"></ul>
-            <h1>Tarefas Concluidas</h1>
-            <ul id ="listaConcluida"></ul>
 
-        </div>
-    </div>
+<body>
+    <nav class="nav_tabs">
+        <ul>
+            <li>
+                <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
+                <label for="tab1" class="tab_label">Estudo</label>
+                <div class="tab-content">
+                <h2>Estudo</h2>
+                <article>
+                    <h1> Tarefas Pendentes </h1>
+                    <div class="content">
+                        <div class="content-task1">
+                            <input type="text" id = "new_taskEscola" placeholder="Adicionar Task">
+                            <button onclick = "newTaskEscola()" id = "add-taskEscola" tittle = "Adicionar Task">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 32 32">
+                                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="content-body">
+                            <ul id ="listaPendenteEscola"></ul>
+                            <h1>Tarefas Concluidas</h1>
+                            <ul id ="listaConcluidaEscola"></ul>
+                        </div>
+                    </div>
+                </article>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="rd_tab" id="tab2">
+                <label for="tab2" class="tab_label">Pessoal</label>
+                <div class="tab-content">
+                    <h2>Pessoal</h2>
+                    <article>
+                        <h1> Tarefas Pendentes </h1>
+                        <div class="content">
+                            <div class="content-task1">
+                                <input type="text" id = "new_taskPessoal" placeholder="Adicionar Task">
+                                <button onclick = "newTaskPessoal()" id = "add-taskPessoal" tittle = "Adicionar Task">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 32 32">
+                                        <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="content-body">
+                                <ul id ="listaPendentePessoal"></ul>
+                                <h1>Tarefas Concluidas</h1>
+                                <ul id ="listaConcluidaPessoal"></ul>
+                            </div>
+                        </div>
+                    </article>
+                    </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="rd_tab" id="tab3">
+                <label for="tab3" class="tab_label">Trabalho</label>
+                <div class="tab-content">
+                    <h2>Trabalho</h2>
+                    <article>
+                        <h1> Tarefas Pendentes </h1>
+                        <div class="content">
+                            <div class="content-task1">
+                                <input type="text" id = "new_taskTrabalho" placeholder="Adicionar Task">
+                                <button onclick = "newTaskTrabalho()" id = "add-taskTrabalho" tittle = "Adicionar Task">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 32 32">
+                                        <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="content-body">
+                                <ul id ="listaPendenteTrabalho"></ul>
+                                <h1>Tarefas Concluidas</h1>
+                                <ul id ="listaConcluidaTrabalho"></ul>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="rd_tab" id="tab4">
+                <label for="tab4" class="tab_label">Outros</label>
+                <div class="tab-content">
+                    <h2>Outros</h2>
+                    <article>
+                        <h1> Tarefas Pendentes </h1>
+                        <div class="content">
+                            <div class="content-task1">
+                                <input type="text" id = "new_taskOutros" placeholder="Adicionar Task">
+                                <button onclick = "newTaskOutros()" id = "add-taskOutros" tittle = "Adicionar Task">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 32 32">
+                                        <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="content-body">
+                                <ul id ="listaPendenteOutros"></ul>
+                                <h1>Tarefas Concluidas</h1>
+                                <ul id ="listaConcluidaOutros"></ul>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    
             
     </body>
 <script src = "script.js"></script>
